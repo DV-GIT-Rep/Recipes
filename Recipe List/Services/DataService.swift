@@ -36,9 +36,14 @@ class DataService: ObservableObject {
                 
                 let recipeData = try decoder.decode([Recipe].self, from: data)
                 
-                //Add the unique IDs
+                //Add a unique ID to each recipe
                 for rec in recipeData {
                     rec.id = UUID()
+                    
+                    //Add a unique ID to each recipe's ingredients
+                    for ing in rec.ingredients {
+                        ing.id = UUID()
+                    }
                 }
                 
                 //Return the recipes from the JSON data

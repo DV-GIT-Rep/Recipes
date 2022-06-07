@@ -38,10 +38,10 @@ struct RecipeDetailView: View {
                     .font(.headline)
                     .padding(.bottom, 1)
                 
-                ForEach (recipe.ingredients, id: \.self) { item in
+                ForEach (recipe.ingredients) { item in
                     HStack(alignment: .top) {
-                        Text("•  ")
-                        Text(item)
+                        Text("• ")
+                        Text(item.name)
                     }
                 }
             }
