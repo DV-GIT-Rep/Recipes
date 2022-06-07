@@ -12,7 +12,7 @@ struct RecipeTabView: View {
         
         TabView {
             
-            Text("Featured View")
+            RecipeFeaturedView()
                 .tabItem {
                     VStack {
                         Image(systemName: "star.fill")
@@ -28,7 +28,7 @@ struct RecipeTabView: View {
                     }
                 }
         }
-        .frame(height: 880)
+//        .frame(height: 880)
 //        .tabViewStyle(.page)  //Scrolls left/right rather than icons @ bottom of screen
     }
 }

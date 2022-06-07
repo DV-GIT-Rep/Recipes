@@ -12,6 +12,8 @@ struct Recipe_ListApp: App {
     var body: some Scene {
         WindowGroup {
             RecipeTabView()
+            //MARK: - Create instance of RecipeModel (ie. new recipe)
+            .environmentObject(RecipeModel())
         }
     }
 }
